@@ -20,12 +20,17 @@
 
 console.log('FizzBuzz ex');
 
+function calcularBuzz(value) {
+  return value % 3 != 0 && value % 5 == 0;
+}
+
 numero = 0;
 const fizzbuzz = numero%3 == 0 && numero%5 == 0;
 const fizz = numero%3 == 0 && numero%5 != 0;
-const buzz = numero%3 != 0 && numero%5 == 0;
+// const buzz = calcularBuzz(numero);
 
 for (i = 0; i<100; i++) {
+  const isBuzz = calcularBuzz(i);
   numero += numero +1;
     if (numero == fizz){
       console.log("fizz");
